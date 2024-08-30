@@ -8,13 +8,14 @@ To ensure that your Django project has the appropriate dependencies and does not
 
 1. **Create the virtual environment:**
 
-   ```bash
-   python -m venv virtual
+ ```bash
+  myworld\Scripts\activate.bat
+```
 2. **Activate the virtual environment:**
 
 On Windows:
   ```bash
-  myworld\Scripts\activate.bat
+  python -m venv virtual
 ```
 3. **Install Dependency**
   ```bash
@@ -31,7 +32,7 @@ On Windows:
 6. **Check api**
   ```bash
   URL: http://127.0.0.1:8000/api/posts/
-  For all posts avaible
+  For all Posts avaible
 ```
   ```bash
   URL: http://127.0.0.1:8000/api/posts/<slug:slug>/
