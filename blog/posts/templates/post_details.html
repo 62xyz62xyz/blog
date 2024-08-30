@@ -1,0 +1,22 @@
+{% extends "master_nav_foo.html" %}
+{% load static %}
+
+{% block title %}
+Blog Description
+{% endblock %}
+
+{% block content %}
+    <!-- Blog Post -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="blog-post">
+                    <h1 style="text-align: center; color: #337ab7; font-weight: bold;">{{ post.title }}</h1>
+                    <br><br>
+                    <p class="lead" style="font-family: 'Georgia', serif; font-size: 18px; line-height: 1.6; color: #333; text-align: justify;">{{ post.content|linebreaksbr }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "master_nav_foo.html" %}
+{% load static %}
+
+{% block title %}
+  Blog List
+{% endblock %}
+
+{% block content %}
+
+<div class="event" id="event">
+    <div class="container">
+        <div class="row">
+            {% for x in post %}
+            <div class="col-md-4 col-sm-4">
+                <!-- event item -->
+                <div class="event-item">
+                    <div>
+                        <!-- image -->
+                        <img class="img-responsive" src="{% static 'img/event/1.jpg' %}" alt="Events" />
+                        <!-- heading -->
+                        <h4><a href="/posts/{{ x.slug }}/">{{ x.title }}</a></h4>
+                    </div>
+                    <!-- sub text -->
+                    <span class="sub-text">{{ x.created_at }} | {{ x.author }}</span>
+                    <!-- paragraph -->
+                     
+                    <p> {{ x.content }} .....</p>
+                    
+                </div>
+            </div>
+
+            {% endfor %}
+
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
